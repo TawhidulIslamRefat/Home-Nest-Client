@@ -19,7 +19,6 @@ const Banner = () => {
       </div>
       <div className="w-11/12 mx-auto">
         <Swiper
-          // install Swiper modules
           modules={[Navigation]}
           spaceBetween={30}
           slidesPerView={1}

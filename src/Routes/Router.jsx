@@ -9,13 +9,15 @@ import Login from "../Pages/Login/Login";
 import MyRatings from "../Pages/MyRatings/MyRatings";
 import Register from "../Pages/Register/Register";
 import UpdateProperty from "../Pages/UpdateProperty/UpdateProperty";
+import ErrorPage from "../Components/Error/ErrorPage";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <MainLayout></MainLayout>,
+    errorElement:<ErrorPage></ErrorPage>,
     children: [
-      { path: "/", element: <Home></Home> },
+      { index:true, element: <Home></Home> },
       {path:"/all-properties", Component:AllProperties},
       {path:"/add-property", Component:AddProperty},
       {path:"/my-property", Component:MyProperties},
