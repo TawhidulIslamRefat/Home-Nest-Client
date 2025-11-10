@@ -3,6 +3,7 @@ import Banner from '../../Components/Banner/Banner';
 import WhyChooseUs from '../../Components/WhyChooseUs/WhyChooseUs';
 import OurService from '../../Components/OurService/OurService';
 import Loading from '../../Components/Loading/Loading';
+import ConsultSection from '../../Components/Consult/Consult';
 
 const Home = () => {
     return (
@@ -18,6 +19,9 @@ const Home = () => {
             </section>
             <section>
                 <WhyChooseUs></WhyChooseUs>
+            </section>
+            <section>
+                <ConsultSection></ConsultSection>
             </section>
         </div>
     );

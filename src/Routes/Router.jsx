@@ -10,6 +10,7 @@ import MyRatings from "../Pages/MyRatings/MyRatings";
 import Register from "../Pages/Register/Register";
 import UpdateProperty from "../Pages/UpdateProperty/UpdateProperty";
 import ErrorPage from "../Components/Error/ErrorPage";
+import ForgetPassword from "../Pages/ForgetPassword/ForgetPassword";
 
 const router = createBrowserRouter([
   {
@@ -23,7 +24,8 @@ const router = createBrowserRouter([
       {path:"/my-property", Component:MyProperties},
       {path:"/properties/:id", Component:PropertyDetails},
       {path:"/my-ratings", Component:MyRatings},
-      {path:"properties/:id/edit", Component:UpdateProperty},
+      {path:"/properties/:id/edit", Component:UpdateProperty},
+      {path:"/forget-pass", Component:ForgetPassword},
       {path:"/login", Component:Login},
       {path:"/register", Component:Register},
     ],

@@ -5,8 +5,13 @@ const WhyChooseUs = () => {
   return (
     <div>
       <section className="w-11/12 mx-auto my-20">
+      
+       
         <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold">Why Choose Us</h2>
+          <span className=" bg-[#FFEBE7] text-center text-[#FF5A3C] text-xl p-1 rounded-xl">
+          Choose Us
+        </span>
+          <h2 className="text-4xl font-bold mt-5">Why Choose Us</h2>
           <p className="text-gray-600 my-4 max-w-xl mx-auto text-[16px] font-medium">
             We focus on trust, comfort, and transparency — making your property
             journey easier and smoother.
