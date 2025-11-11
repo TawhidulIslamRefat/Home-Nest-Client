@@ -14,7 +14,7 @@ const AllPropertiesCard = ({ property }) => {
   } = property;
   return (
     <div className="flex">
-      <div className=" rounded-lg shadow-2xl bg-white hover:shadow-2xl transition overflow-hidden">
+      <div className=" rounded-lg shadow-sm bg-white hover:shadow-2xl hover:-translate-y-1 transition-all duration-300">
         <div className="relative">
           <img
             src={image}
@@ -49,7 +49,7 @@ const AllPropertiesCard = ({ property }) => {
           </div>
           <p className="text-lg font-bold text-[#FF5A3C]">${price}</p>
           <Link
-            to={``}
+           to={`/properties/${_id}`}
             className="inline-block text-center w-full bg-[#FF5A3C] text-white font-medium py-2 rounded-md hover:bg-[#e24a39] transition"
           >
             See Details

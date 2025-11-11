@@ -15,7 +15,7 @@ const OurService = () => {
         <h1 className="text-center font-bold text-4xl mt-5">Our Main Focus</h1>
         <div>
           <div className="grid grid-cols-3 items-center justify-center gap-20 my-15">
-            <div className="card bg-base-100  shadow-xl">
+            <div className="card bg-base-100  shadow-xl hover:shadow-2xl hover:-translate-y-1 transition-all duration-300">
               <figure className="px-10 pt-10">
                 <img
                   src={iamge1}
@@ -33,7 +33,7 @@ const OurService = () => {
                 </div>
               </div>
             </div>
-            <div className="card bg-base-100  shadow-xl">
+            <div className="card bg-base-100  shadow-xl hover:shadow-2xl hover:-translate-y-1 transition-all duration-300">
               <figure className="px-10 pt-10">
                 <img
                   src={iamge2}
@@ -51,7 +51,7 @@ const OurService = () => {
                 </div>
               </div>
             </div>
-            <div className="card bg-base-100  shadow-xl">
+            <div className="card bg-base-100  shadow-xl hover:shadow-2xl hover:-translate-y-1 transition-all duration-300">
               <figure className="px-10 pt-10">
                 <img
                   src={iamge3}

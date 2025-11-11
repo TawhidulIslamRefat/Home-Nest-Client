@@ -50,7 +50,7 @@ const MyProperties = () => {
           {myProperties.map((property) => (
             <div
               key={property._id}
-              className="border rounded-lg shadow-md p-5 bg-white"
+              className="border rounded-lg shadow-md p-5 bg-white hover:shadow-2xl hover:-translate-y-1 transition-all duration-300"
             >
               <img
                 src={property.image}
