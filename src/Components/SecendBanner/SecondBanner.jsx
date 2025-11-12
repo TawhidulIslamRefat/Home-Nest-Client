@@ -15,23 +15,21 @@ const SecondBanner = ({setSearchText,setSort}) => {
         setInputText("")
     }
   return (
-    <div className="bg-[#F8F7F7] dark:bg-[#23272b] relative py-10"
+    <div className="bg-[#F8F7F7] dark:bg-[#23272b] relative py-10 sm:py-15 md:py-20"
     >
       <div className="w-10/12 mx-auto grid lg:grid-cols-2 items-center gap-10 py-15">
         <div className="space-y-6">
-          <h1 className="text-5xl font-bold leading-tight">
+          <h1 className=" text-xl sm:text-2xl md:text-3xl lg:text-5xl font-bold leading-tight">
             Easy way to find <br /> a perfect{" "}
             <span className="text-[#FF5A3C]">Property</span>
           </h1>
-          <p className="text-gray-600 max-w-lg font-medium dark:text-gray-300">
+          <p className="text-gray-600 max-w-lg font-medium dark:text-gray-300 text-xs sm:text-sm">
             Discover the perfect place that matches your lifestyle and comfort.
             Every property is chosen with care to bring you peace and happiness.
           </p>
 
           <div className="shadow-lg p-5 rounded-xl bg-white space-y-3 z-100">
-            <div className="flex gap-3 justify-center">
-            </div>
-            <div className="flex items-center gap-3">
+            <div className="flex items-center gap-3 flex-col md:flex-row">
               <input
                 type="text"
                 value={inputText}
@@ -50,13 +48,13 @@ const SecondBanner = ({setSearchText,setSort}) => {
               </select>
               <button
               onClick={handleSearch}
-              className="bg-[#FF5A3C] hover:bg-gray-700 text-white px-6 py-3 rounded-md flex items-center gap-2">
+              className="bg-[#FF5A3C] hover:bg-gray-700 text-white px-4 md:px-6 py-1.5 md:py-3 rounded-md flex items-center gap-2">
                 Search
               </button>
             </div>
           </div>
         </div>
-        <div className="relative flex justify-center">
+        <div className="relative flex justify-center ">
           <img
             src={image1}
             alt=""
@@ -65,12 +63,12 @@ const SecondBanner = ({setSearchText,setSort}) => {
           <img
             src={image2}
             alt=""
-            className="w-72 h-48 rounded-xl object-cover shadow-xl absolute -top-5 -right-5 border-4 border-white"
+            className="w-72 h-48 rounded-xl object-cover shadow-xl absolute -top-5 -right-5 border-4 border-white hidden md:flex"
           />
           <img
             src={image3}
             alt=""
-            className="w-72 h-48 rounded-xl object-cover shadow-xl absolute -bottom-5 -left-5 border-4 border-white"
+            className="w-72 h-48 rounded-xl object-cover shadow-xl absolute md:-bottom-5 -bottom-25 -left-5 border-4 border-white "
           />
         </div>
       </div>

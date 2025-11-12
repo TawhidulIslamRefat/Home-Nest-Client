@@ -3,43 +3,43 @@ import React from "react";
 const Footer = () => {
   return (
     <div className="bg-[#171B2A] pt-4 ">
-      <footer className=" w-11/12 mx-auto footer sm:footer-horizontal  p-10">
+      <footer className=" w-full md:w-11/12 mx-auto footer sm:footer-horizontal p-4  md:p-10">
         <nav>
-          <a href="/" className="text-2xl font-semibold  text-base-100 dark:text-gray-300 ">
+          <a href="/" className="text-lg md:text-2xl font-semibold  text-base-100 dark:text-gray-300 ">
               Home<span className="text-[#FF5A3C] ">Nest</span>{" "}
             </a>
-          <p className=" text-[17px] text-white leading-7">Your trusted companion for <br /> property buying, renting, and living.</p>
+          <p className="text-sm md:text-[17px] text-white leading-5 md:leading-7">Your trusted companion for <br /> property buying, renting, and living.</p>
         </nav>
-        <nav className="space-y-1">
-          <h6 className="footer-title text-white  text-xl">Company</h6>
-          <a className="link link-hover text-white text-[18px]">About us</a>
-          <a className="link link-hover text-white text-[18px]">All Properties</a>
-          <a className="link link-hover text-white text-[18px]">Contact us</a>
-          <a className="link link-hover text-white text-[18px]">FAQ</a>
+        <nav className="space-y-0 md:space-y-1">
+          <h6 className="footer-title text-white text-sm  md:text-xl">Company</h6>
+          <a className="link link-hover text-white text-sm md:text-[18px]">About us</a>
+          <a className="link link-hover text-white text-sm md:text-[18px]">All Properties</a>
+          <a className="link link-hover text-white text-sm md:text-[18px]">Contact us</a>
+          <a className="link link-hover text-white text-sm md:text-[18px]">FAQ</a>
         </nav>
-        <nav className="space-y-1">
-          <h6 className="footer-title text-white  text-xl">Services</h6>
-          <a className="link link-hover text-white text-[18px]">Login</a>
-          <a className="link link-hover text-white text-[18px]">My account</a>
-          <a className="link link-hover text-white text-[18px]">Terms & Conditions</a>
-          <a className="link link-hover text-white text-[18px]">My ratings</a>
-          <a className="link link-hover text-white text-[18px]">FAQ</a>
+        <nav className="space-y-0 md:space-y-1">
+          <h6 className="footer-title text-white text-sm md:text-xl">Services</h6>
+          <a className="link link-hover text-white text-sm md:text-[18px]">Login</a>
+          <a className="link link-hover text-white text-sm md:text-[18px]">My account</a>
+          <a className="link link-hover text-white text-sm md:text-[18px]">Terms & Conditions</a>
+          <a className="link link-hover text-white text-sm md:text-[18px]">My ratings</a>
+          <a className="link link-hover text-white text-sm md:text-[18px]">FAQ</a>
         </nav>
-        <nav className="space-y-1">
-          <h6 className="footer-title text-white text-xl">Customer Service</h6>
-          <a className="link link-hover text-white text-[18px]">Login</a>
-          <a className="link link-hover text-white text-[18px]">My account</a>
-          <a className="link link-hover text-white text-[18px]">My Property</a>
-          <a className="link link-hover text-white text-[18px]">FAQ</a>
+        <nav className="space-y-0 md:space-y-1">
+          <h6 className="footer-title text-white text-sm md:text-xl">Customer Service</h6>
+          <a className="link link-hover text-white text-sm md:text-[18px]">Login</a>
+          <a className="link link-hover text-white text-sm md:text-[18px]">My account</a>
+          <a className="link link-hover text-white text-sm md:text-[18px]">My Property</a>
+          <a className="link link-hover text-white text-sm md:text-[18px]">FAQ</a>
         </nav>
         <nav>
-          <h6 className="footer-title text-white  text-xl">Social</h6>
-          <div className="grid grid-flow-col gap-4">
+          <h6 className="footer-title text-white  md:text-xl">Social</h6>
+          <div className="grid grid-flow-col gap-2 md:gap-4">
             <a>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                width="28"
-                height="28"
+                width="22"
+                height="22"
                 viewBox="0 0 24 24"
                 className="fill-white"
               >
@@ -49,8 +49,8 @@ const Footer = () => {
             <a>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                width="28"
-                height="28"
+                width="22"
+                height="22"
                 viewBox="0 0 24 24"
                 className="fill-white"
               >
@@ -60,8 +60,8 @@ const Footer = () => {
             <a>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                width="28"
-                height="28"
+                width="22"
+                height="22"
                 viewBox="0 0 24 24"
                 className="fill-white"
               >
@@ -72,7 +72,7 @@ const Footer = () => {
         </nav>
       </footer>
       <div className="bg-[#282B38] py-3 ">
-        <p className="text-center text-[18px] text-gray-300">© 2025 HomeNest. All rights reserved.</p>
+        <p className="text-center text-xs md:text-[18px] text-gray-300">© 2025 HomeNest. All rights reserved.</p>
       </div>
     </div>
   );

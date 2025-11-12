@@ -22,7 +22,7 @@ const AllPropertiesCard = ({ property }) => {
             className="w-100 h-70 object-cover"
           />
           <span
-            className={`absolute top-3 left-3 text-xs px-4 py-1.5 rounded-sm text-white text-[16px] font-medium ${
+            className={`absolute top-3 left-3 text-xs px-2 md:px-4 py-1.5 rounded-sm text-white md:text-[16px] font-medium ${
               category === "Sale"
                 ? "bg-[#FF5A3C]"
                 : category === "Rent"
@@ -34,23 +34,23 @@ const AllPropertiesCard = ({ property }) => {
           </span>
         </div>
         <div className="p-4 space-y-3">
-          <h2 className="text-2xl font-semibold text-[#1f1f1f] dark:text-white">
+          <h2 className="text-lg md:text-2xl font-semibold text-[#1f1f1f] dark:text-white">
             {propertyName}
           </h2>
           <div className="flex items-center justify-between gap-2 text-gray-600 text-sm font-medium">
-            <div className="flex items-center gap-2 text-gray-600 text-sm font-medium">
+            <div className="flex items-center gap-2 text-gray-600 text-xs sm:text-sm font-medium">
               <FaLocationDot className="text-[#FF5A3C]" />
               <span className="dark:text-gray-300">{location}</span>
             </div>
-            <div className="flex flex-col mr-4 dark:text-gray-300">
+            <div className="flex flex-col mr-4 dark:text-gray-300 text-xs sm:text-sm">
                 <span className="font-bold">Posted By  :</span>
                 <span> {postedBy.name}</span>
             </div>
           </div>
-          <p className="text-lg font-bold text-[#FF5A3C]">${price}</p>
+          <p className="text-sm sm:text-lg font-bold text-[#FF5A3C]">${price}</p>
           <Link
            to={`/properties/${_id}`}
-            className="inline-block text-center w-full bg-[#FF5A3C] text-white font-medium py-2 rounded-md hover:bg-[#e24a39] transition"
+            className="inline-block text-center w-full bg-[#FF5A3C] text-white font-medium text-xs sm:text-sm py-1 md:py-2 rounded-md hover:bg-[#e24a39] transition"
           >
             See Details
           </Link>

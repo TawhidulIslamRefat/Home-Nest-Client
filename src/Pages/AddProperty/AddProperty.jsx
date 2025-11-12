@@ -43,16 +43,16 @@ const AddProperty = () => {
         });
     };
     return (
-        <div className=' dark:bg-[#1D232A] py-14 min-h-screen'>
-            <div className='max-w-3xl mx-auto bg-white dark:bg-[#23272B] shadow-xl rounded-xl p-10 border '>
-               <h1 className='text-center text-4xl font-bold mb-8'>
+        <div className=' dark:bg-[#1D232A] py-14 min-h-screen mt-20'>
+            <div className=' w-[97%] sm:w-3xl mx-auto bg-white dark:bg-[#23272B] shadow-xl rounded-xl p-5 md:p-10 border '>
+               <h1 className='text-center text-xl sm:-text-2xl md:text-4xl font-bold mb-8'>
                Add New <span className='text-[#FF5A3C]'>Property</span>
                </h1>
 
-               <form onSubmit={handleAddProperty}>
+               <form onSubmit={handleAddProperty} className='w-full'>
                 {/* property name */}
                 <div>
-                    <label className='block font-semibold mb-1'> Property Name</label>
+                    <label className='block font-semibold mb-1 text-sm'> Property Name</label>
                     <input type="text"
                     name='propertyName'
                     className='input input-bordered w-full'
@@ -64,7 +64,7 @@ const AddProperty = () => {
                 {/* price and category */}
                 <div className='grid grid-cols-1 md:grid-cols-2 gap-2 my-5'>
                  <div>
-                    <label className='block font-semibold mb-1'> Category</label>
+                    <label className='block font-semibold mb-1 text-sm'> Category</label>
                     <select name="category" className='select select-bordered w-full' required>
                         <option disabled selected>Select Category</option>
                         <option>Rent</option>
@@ -74,7 +74,7 @@ const AddProperty = () => {
                     </select>
                  </div>
                  <div>
-                      <label className='block font-semibold mb-1'> Price (USD)</label>
+                      <label className='block font-semibold mb-1 text-sm'> Price (USD)</label>
                     <input type="number"
                     name='price'
                     className='input input-bordered w-full'
@@ -84,7 +84,7 @@ const AddProperty = () => {
                  </div>
                 </div>
                  <div>
-                      <label className='block font-semibold mb-1'> Location</label>
+                      <label className='block font-semibold mb-1 text-sm'> Location</label>
                     <input type="text"
                     name='location'
                     className='input input-bordered w-full'
@@ -93,7 +93,7 @@ const AddProperty = () => {
                     />
                  </div>
                  <div>
-                      <label className='block font-semibold my-5'>Description </label>
+                      <label className='block font-semibold my-5 text-sm'>Description </label>
                      <textarea name="description"
                      className='textarea textarea-bordered w-full'
                      rows='4'
@@ -102,7 +102,7 @@ const AddProperty = () => {
                      ></textarea>
                  </div>
                   <div>
-                      <label className='block font-semibold mb-1 mt-4'> Image URL</label>
+                      <label className='block font-semibold mb-1 mt-4 text-sm'> Image URL</label>
                     <input type="text"
                     name='image'
                     className='input input-bordered w-full'
@@ -125,7 +125,7 @@ const AddProperty = () => {
                  </div>
                  <button
                  type='submit'
-                 className='btn w-full bg-[#FF5A3C] hover:bg-[#e24a30] text-white text-lg py-3'>
+                 className='btn w-full bg-[#FF5A3C] hover:bg-[#e24a30] text-white text-sm sm:text-lg py-1.5 sm:py-3'>
                     Add Property
                  </button>
                </form>

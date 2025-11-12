@@ -59,6 +59,10 @@ const router = createBrowserRouter([
       { path: "/register", Component: Register },
     ],
   },
+   {
+    path: "/*",
+    element: <ErrorPage></ErrorPage>,
+  },
 ]);
 
 export default router;

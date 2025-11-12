@@ -30,12 +30,12 @@ const ForgetPassword = () => {
     <div className="flex justify-center items-center min-h-screen">
       <div className="card bg-base-100 w-[95%]   md:w-[60%] lg:w-[35%] rounded-[5px] shadow-2xl ">
         <div className="card-body px-15 flex-1">
-          <h1 className="text-4xl font-semibold text-center mt-[30px] pb-10 border-b border-base-300 px-5">
+          <h1 className=" text-xl md:text-2xl lg:text-4xl font-semibold text-center mt-[30px] pb-10 border-b border-base-300 px-5">
             Forget Your Password
           </h1>
           <form onSubmit={handleForgetPassword}>
             <fieldset className="fieldset">
-              <label className="label text-xl font-semibold text-[#403F3F] mb-3 dark:text-gray-300">
+              <label className="label text-sm font-semibold text-[#403F3F] mb-3 dark:text-gray-300">
                 Email
               </label>
               <input
@@ -46,7 +46,7 @@ const ForgetPassword = () => {
                 className="input w-full text-[16px] font-normal mb-5 bg-[#F3F3F3] text-gray-500"
                 placeholder="Enter your email address"
               />
-              <p className="text-[16px] font-semibold text-[#706F6F] text-center">
+              <p className="text-xs md:text-[16px] font-semibold text-[#706F6F] text-center">
                 Go Login?
                 <Link
                   className="ml-1 text-[#F75B5F] hover:underline"
@@ -58,7 +58,7 @@ const ForgetPassword = () => {
 
               <button
                 type="submit"
-                className="btn bg-linear-to-r to-[orange] from-[#FF5A3C] text-white mt-4 mb-2"
+                className="btn bg-[#FF5A3C] hover:bg-orange-700 text-white mt-4 mb-2"
               >
                 Forget Password
               </button>

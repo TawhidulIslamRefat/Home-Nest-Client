@@ -32,10 +32,24 @@ const Login = () => {
           })
           .then((res)=> res.json())
           .then(()=>{
-            alert("Register Successful!");
-          navigate("/");
-          });
+            Swal.fire({
+                position: "center",
+                icon: "success",
+                title: "Login Successful",
+                showConfirmButton: false,
+                timer: 1500,
+              });
+              navigate(`${location.state ? location.state : "/"}`)
       })
+          .catch((error) => {
+          Swal.fire({
+            icon: "error",
+            title: "Oops...",
+            text: "Something went wrong!",
+          });
+          console.error(error);
+        });
+    })
       .catch((error) => {
         Swal.fire({
           icon: "error",
@@ -54,12 +68,21 @@ const Login = () => {
         const user = result.user;
         console.log(user);
         setUser(user);
-        alert("Login Successful!", {
-          onClose: () => navigate(`${location.state ? location.state : "/"}`),
-        });
+        Swal.fire({
+                position: "center",
+                icon: "success",
+                title: "Login Successful",
+                showConfirmButton: false,
+                timer: 1500,
+              });
+         navigate(`${location.state ? location.state : "/"}`)
       })
       .catch((error) => {
-        alert(error.message);
+          Swal.fire({
+          icon: "error",
+          title: "Oops...",
+          text: "Something went wrong!",error,
+        });
       });
   };
   return (
@@ -67,12 +90,12 @@ const Login = () => {
       <div className="flex justify-center items-center min-h-screen lg:my-0 lg:min-h-screen">
         <div className="card bg-base-100  w-[95%]   md:w-[60%] lg:w-[35%] shrink-0 rounded-[5px] shadow-2xl ">
           <div className="card-body px-4 lg:px-15">
-            <h1 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-center mt-2 lg:mt-[30px] pb-3 lg:pb-10 border-b border-base-300 px-5">
+            <h1 className="text-xl sm:text-3xl md:text-4xl font-semibold text-center mt-2 lg:mt-[30px] pb-3 lg:pb-10 border-b border-base-300 px-5">
               Login your account
             </h1>
             <form onSubmit={handleLogin}>
               <fieldset className="fieldset ">
-                <label className="label text-lg sm:text-xl font-semibold text-[#403F3F] dark:text-gray-300 mb-1 lg:mb-3">
+                <label className="label text-sm sm:text-xl font-semibold text-[#403F3F] dark:text-gray-300 mb-1 lg:mb-3">
                   Email
                 </label>
                 <input
@@ -80,17 +103,17 @@ const Login = () => {
                   name="email"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
-                  className="input  w-full text-sm sm:text-base  font-normal mb-2 lg:mb-5 text-gray-500 bg-[#F3F3F3]"
+                  className="input  w-full text-xs sm:text-base  font-normal mb-2 lg:mb-5 text-gray-500 bg-[#F3F3F3]"
                   placeholder="Enter your email address"
                 />
-                <label className="label text-lg sm:text-xl font-semibold text-[#403F3F] mb-1 lg:mb-3 dark:text-gray-300">
+                <label className="label text-sm sm:text-xl font-semibold text-[#403F3F] mb-1 lg:mb-3 dark:text-gray-300">
                   Password
                 </label>
                 <div className="relative">
                   <input
                     type={showPassword ? "text" : "password"}
                     name="password"
-                    className="input w-full text-sm sm:text-base p-2 sm:p-3 bg-[#F3F3F3] text-gray-500"
+                    className="input w-full text-xs sm:text-base p-2 sm:p-3 bg-[#F3F3F3] text-gray-500"
                     placeholder="Enter your password"
                     required
                   />
@@ -112,7 +135,7 @@ const Login = () => {
               </div>
                 <button
                   type="submit"
-                  className="btn bg-linear-to-r to-[orange] from-[#FF5A3C] text-white mt-4 mb-2"
+                  className="btn bg-[#FF5A3C] hover:bg-orange-700 text-white mt-4 mb-2"
                 >
                   Login
                 </button>
@@ -120,7 +143,7 @@ const Login = () => {
             </form>
             <button
               onClick={handleGoogleLogin}
-              className="btn bg-white text-black border-[#e5e5e5] hover:bg-linear-to-r to-[orange] from-[#FF5A3C] hover:text-white"
+              className="btn bg-white text-black border-[#e5e5e5] hover:bg-[#FF5A3C] hover:text-white"
             >
               <svg
                 aria-label="Google logo"
@@ -151,7 +174,7 @@ const Login = () => {
               </svg>
               Login with Google
             </button>
-            <p className="text-[16px] font-semibold text-[#706F6F] text-center">
+            <p className="text-sm md:text-[16px] font-semibold text-[#706F6F] text-center">
               Dont’t Have An Account ?
               <Link
                 className="text-[#F75B5F] hover:underline"

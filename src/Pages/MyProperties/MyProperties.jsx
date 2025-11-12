@@ -3,15 +3,23 @@ import { AuthContext } from "../../Contexts/AuthContext";
 import { Link } from "react-router";
 import Swal from "sweetalert2";
 import { FaLocationArrow } from "react-icons/fa6";
+import Loading from "../../Components/Loading/Loading";
 
 const MyProperties = () => {
   const { user } = use(AuthContext);
   const [myProperties, setMyProperties] = useState([]);
+  const [loading,setLoading] = useState(true);
 
   useEffect(() => {
+    setLoading(true);
     fetch(`http://localhost:3000/properties?email=${user?.email}`)
       .then((res) => res.json())
-      .then((data) => setMyProperties(data));
+      .then((data) =>{
+        setMyProperties(data);
+        setLoading(false);      
+      })
+      .catch(()=> setLoading(false)) 
+
   }, [user?.email]);
 
   const handleDelete = (id) => {
@@ -37,9 +45,12 @@ const MyProperties = () => {
     });
   };
 
+   if (loading) {
+    return <Loading />;
+  }
   return (
-    <div className="w-10/12 mx-auto my-16">
-      <h1 className="text-4xl font-bold text-center mb-10">My Properties</h1>
+    <div className="w-[90%] sm:w-10/12 mx-auto my-16 mt-30">
+      <h1 className="text-4xl font-bold text-center mb-10">My <span className="text-[#FF5A3C]">Properties</span></h1>
 
       {myProperties.length === 0 ? ( <>
         <div className=" flex flex-col justify-center items-center">
@@ -47,7 +58,7 @@ const MyProperties = () => {
           You haven't added any property yet
         </p>
         <div>
-          <Link to='/add-property' className="btn px-10 py-5 mt-10  bg-[#FF5A3C]">Add Property</Link>
+          <Link to='/add-property' className="btn px-10 py-5 mt-10 text-white  bg-[#FF5A3C]">Add Property</Link>
         </div>
         </div>
         </>

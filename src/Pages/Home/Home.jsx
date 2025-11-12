@@ -11,7 +11,7 @@ import LatestProperties from "../../Components/LatestProperties/LatestProperties
 const Home = () => {
   return (
     <div>
-      <section className="bg-[#F2F6F7] dark:bg-[#23272b] py-20 mt-3">
+      <section className="bg-[#F2F6F7] dark:bg-[#23272b] py-15 md:py-20 mt-3">
         <Banner></Banner>
       </section>
       <section className="mt-15">

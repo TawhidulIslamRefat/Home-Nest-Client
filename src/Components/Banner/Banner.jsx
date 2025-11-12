@@ -21,7 +21,7 @@ const Banner = () => {
       <div className="swiper-button-next !text-black !font-bold border p-2 border-gray-300 hover:bg-[#FF5A3C] hover:!text-white hover:rounded-lg">
         <FaArrowRight />
       </div>
-      <div className="w-11/12 mx-auto">
+      <div className=" w-[98%]  md:w-11/12 mx-auto">
         <Swiper
           modules={[Navigation]}
           spaceBetween={30}
@@ -35,86 +35,86 @@ const Banner = () => {
         >
 
           <SwiperSlide>
-            <div className="flex items-center justify-around">
-              <div>
-                <p className="flex items-center gap-1 text-xl font-semibold">
-                  <span className="text-[#FF5A3C] text-2xl">
+            <div className="flex flex-col md:flex-row w-full items-center justify-around">
+              <div className="mb-4">
+                <p className="flex items-center gap-1 text-sm md:text-xl font-semibold">
+                  <span className="text-[#FF5A3C] text-lg md:text-2xl">
                     <AiFillHome />
                   </span>{" "}
                   Real <span className="text-[#FF5A3C]"> Estate{" "}</span>
                 </p>
-                <h1 className="font-bold text-7xl mt-2 mb-5 leading-20">
-                  Find Your Dream <br /> House <span className="text-[#FF5A3C]">By Us</span>
+                <h1 className="font-bold text-xl  md:text-5xl lg:text-7xl mt-1 md:mt-2 mb-2 md:mb-5 leading-6 md:leading-20">
+                  Find Your Dream  <br /> House <span className="text-[#FF5A3C]">By Us</span>
                 </h1>
-                <p className="text-xl font-medium border-l border-gray-400 pl-4 text-gray-700 mb-5 leading-9 dark:text-gray-300">
+                <p className="text-xs md:text-xl font-medium border-l border-gray-400 pl-4 text-gray-700 mb-5 leading-5 md:leading-9 dark:text-gray-300">
                   Browse thousands of trusted properties, compare prices, <br />{" "}
                   and choose the one that fits your lifestyle.
                 </p>
-                <Link to='/all-properties' className="bg-[#FF5A3C] text-white text-[18px] font-normal py-3 px-5 rounded-sm">
+                <Link to='/all-properties' className="bg-[#FF5A3C] text-white text-sm md:text-[18px] font-normal md:py-3 md:px-5 py-1.5 px-3 rounded-sm">
                   FIND NOW
                 </Link>
               </div>
-              <div className="w-[1000px]">
+              <div className=" w-full md:w-[600] lg:w-[1000px] ">
                 <Lottie animationData={houseAnimation} loop={true} />
               </div>
             </div>
             
           </SwiperSlide>
           <SwiperSlide>
-            <div className="flex flex-row-reverse items-center justify-around">
-              <div className="text-right mr-5">
-                <p className="flex  items-center justify-end mr-3 gap-1 text-xl font-semibold text-right">
-                  <span className="text-[#FF5A3C] text-2xl">
+            <div className="flex flex-col md:flex-row-reverse items-center justify-around">
+              <div className="text-right mr-5 mb-4">
+                <p className="flex  items-center justify-end mr-3 gap-1 text-sm md:text-xl font-semibold text-right">
+                  <span className="text-[#FF5A3C] text-lg md:text-2xl">
                     <AiFillHome />
                   </span>{" "}
                   Real
                   <span className="text-[#FF5A3C]"> Estate{" "}</span>
                 </p>
-                <h1 className="font-bold text-7xl mt-2 mb-5 leading-20">
-                  Step into a world where <br /> comfort <span className="text-[#FF5A3C]">meets style</span>
+                <h1 className="font-bold text-xl  md:text-5xl lg:text-7xl mt-1 md:mt-2 mb-2 md:mb-5 md:leading-20 leading-6">
+                  Step into a world where comfort <span className="text-[#FF5A3C]">meets style</span>
                 </h1>
-                <p className="text-xl font-medium border-r border-gray-400 pr-4 text-gray-700 mb-5 leading-9 dark:text-gray-300">
+                <p className="text-xs md:text-xl font-medium border-r pr-4 border-gray-400 pl-4 text-gray-700 mb-5 leading-5 md:leading-9 dark:text-gray-300">
                   Explore premium homes built for better living — modern spaces,{" "}
                   <br /> smart layouts, and the warmth you deserve
                 </p>
-                <Link to='/all-properties' className="bg-[#FF5A3C] text-white text-[18px] font-normal py-3 px-5 rounded-sm ">
+                <Link to='/all-properties' className="bg-[#FF5A3C] text-white text-sm md:text-[18px] font-normal md:py-3 md:px-5 py-1.5 px-3 rounded-sm ">
                   Explore
                 </Link>
-                <Link to='/all-properties' className="border-[#FF5A3C] border text-[18px] font-normal py-2.5 px-5 rounded-sm mr-10 ml-6 hover:bg-orange-600 transition transform scale-110 duration-300">
+                <Link to='/all-properties' className="border-[#FF5A3C] border text-sm md:text-[18px] font-normal md:py-3 md:px-5 py-1.5 px-3 rounded-sm mr-10 ml-6 hover:bg-orange-600 transition transform scale-110 duration-300">
                   Buy Now
                 </Link>
               </div>
-              <div className="w-[700px]">
+              <div className="w-[300] md:w-[600] lg:w-[1000px] h-40">
                 <Lottie animationData={houseAnimation1} loop={true} />
               </div>
             </div>
           </SwiperSlide>
          
           <SwiperSlide>
-            <div className="flex items-center justify-around">
-              <div className="ml-10">
-                <p className="flex  items-center  gap-1 text-xl font-semibold text-right">
-                  <span className="text-[#FF5A3C] text-2xl">
+            <div className="flex flex-col md:flex-row items-center justify-around">
+              <div className="ml-10 mb-6">
+                <p className="flex  items-center  gap-1 text-lg md:text-xl font-semibold text-right">
+                  <span className="text-[#FF5A3C] text-lg md:text-2xl">
                     <AiFillHome />
                   </span>{" "}
                   Real <span className="text-[#FF5A3C]">Estate{" "}</span>
                 </p>
-                <h1 className="font-bold text-7xl mt-2 mb-5 leading-20">
+                <h1 className="font-bold text-xl  md:text-5xl lg:text-7xl mt-1 md:mt-2 mb-1 md:mb-5  md:leading-20 leading-6">
                   Safe, secure, and verified <span className="text-[#FF5A3C]">properties.</span>
                 </h1>
-                <p className="text-xl font-medium border-l border-gray-400 pl-4 text-gray-700 mb-5 leading-9 dark:text-gray-300">
+                <p className="text-xs md:text-xl font-medium border-l border-gray-400 pl-4 text-gray-700 mb-5 leading-5 md:leading-9 dark:text-gray-300">
                   Create a warm space where your family grows, smiles, and stays{" "}
                   <br />
                   close. Let’s find that place together.
                 </p>
-                <Link to='/all-properties' className="bg-[#FF5A3C] text-white text-[18px] font-normal py-3 px-5 rounded-sm ">
+                <Link to='/all-properties' className="bg-[#FF5A3C] text-white text-sm md:text-[18px] font-normal md:py-3 md:px-5 py-1.5 px-3 rounded-sm ">
                   FIND NOW
                 </Link>
-                <Link to='/all-properties' className="border-[#FF5A3C] border text-[18px] font-normal py-2.5 px-5 rounded-sm mr-10 ml-6 hover:fill-orange-600 hover:bg-orange-600 transition transform scale-110 duration-300">
-                  RENT NOW
+                <Link to='/all-properties' className="border-[#FF5A3C] border text-sm md:text-[18px] font-normal md:py-3 md:px-5 py-1.5 px-3 rounded-sm mr-10 ml-6 hover:fill-orange-600 hover:bg-orange-600 transition transform scale-110 duration-300">
+                  RENT
                 </Link>
               </div>
-              <div className="w-[1000px]">
+              <div className="w-full md:w-[600] lg:w-[1000px]">
                 <Lottie animationData={houseAnimation2} loop={true} />
               </div>
             </div>

@@ -1,18 +1,27 @@
 import React, { use, useEffect, useState } from "react";
 import { AuthContext } from "../../Contexts/AuthContext";
 import { FaStar } from "react-icons/fa6";
+import Loading from "../../Components/Loading/Loading";
 
 const MyRatings = () => {
   const { user } = use(AuthContext);
   const [myRatings, setMyRatings] = useState([]);
+  const [loading,setLoading] = useState(true)
 
   useEffect(() => {
     fetch(`http://localhost:3000/my-ratings?email=${user.email}`)
       .then((res) => res.json())
-      .then((data) => setMyRatings(data));
+      .then((data) => {setMyRatings(data)
+       setLoading(false);
+      })
+      .catch(()=>setLoading(false))
   }, [user]);
+
+  if (loading) {
+    return <Loading></Loading>
+  }
   return (
-    <div className="w-11/12 mx-auto py-14">
+    <div className="w-11/12 mx-auto py-14 mt-16 overflow-x-hidden">
       <h1 className="text-4xl font-bold text-center mb-10">
         My <span className="text-[#FF5A3C]">Ratings & Reviews</span>
       </h1>

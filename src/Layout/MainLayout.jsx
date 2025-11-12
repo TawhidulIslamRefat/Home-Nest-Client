@@ -15,7 +15,7 @@ const MainLayout = () => {
     return () => clearTimeout(timeOut);
   }, [location.pathname]);
       return showLoader ? (
-        <div className="flex justify-center items-center min-h-screen gap-15 sm:gap-25 ">
+        <div>
       <Loading></Loading>
     </div>
       ) : (
@@ -24,7 +24,7 @@ const MainLayout = () => {
                 <Navbar></Navbar>
             </nav>
 
-            <main className='flex-1 min-h-screen pt-25'>
+            <main className='flex-1 min-h-screen'>
                 <Outlet></Outlet>
             </main>
 
