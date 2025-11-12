@@ -110,44 +110,44 @@ const Register = () => {
             </h1>
             <form onSubmit={handleRegister}>
               <fieldset className="fieldset ">
-                <label className="label text-lg sm:text-xl font-semibold text-[#403F3F] mb-1 lg:mb-3">
+                <label className="label text-lg sm:text-xl font-semibold text-[#403F3F] mb-1 lg:mb-3 dark:text-gray-300">
                   Your Name
                 </label>
                 <input
                   type="text"
                   name="name"
-                  className="input w-full text-sm sm:text-base text-[16px] font-normal p-2 sm:p-3 bg-[#F3F3F3]"
+                  className="input w-full text-sm sm:text-base text-[16px] font-normal p-2 sm:p-3 bg-[#F3F3F3] text-gray-500"
                   placeholder="Enter your name"
                   required
                 />
-                <label className="label text-lg sm:text-xl font-semibold text-[#403F3F] mb-1 lg:mb-3">
+                <label className="label text-lg sm:text-xl font-semibold text-[#403F3F] mb-1 lg:mb-3 dark:text-gray-300">
                   Photo URL
                 </label>
                 <input
                   type="text"
                   name="photo"
-                  className="input w-full text-sm sm:text-base text-[16px] font-normal p-2 sm:p-3 bg-[#F3F3F3]"
+                  className="input w-full text-sm sm:text-base text-[16px] font-normal p-2 sm:p-3 bg-[#F3F3F3] text-gray-500"
                   placeholder="Enter your Photo URL"
                   required
                 />
-                <label className="label text-lg sm:text-xl font-semibold text-[#403F3F] mb-1 lg:mb-3">
+                <label className="label text-lg sm:text-xl font-semibold text-[#403F3F] mb-1 lg:mb-3 dark:text-gray-300">
                   Email
                 </label>
                 <input
                   type="email"
                   name="email"
-                  className="input w-full text-sm sm:text-base text-[16px] font-normal p-2 sm:p-3 bg-[#F3F3F3]"
+                  className="input w-full text-sm sm:text-base text-[16px] font-normal p-2 sm:p-3 bg-[#F3F3F3] text-gray-500"
                   placeholder="Enter your email address"
                   required
                 />
-                <label className="label text-lg sm:text-xl font-semibold text-[#403F3F] mb-1 lg:mb-3">
+                <label className="label text-lg sm:text-xl font-semibold text-[#403F3F] mb-1 lg:mb-3 dark:text-gray-300">
                   Password
                 </label>
                 <div className="relative">
                   <input
                     type={showPassword ? "text" : "password"}
                     name="password"
-                    className="input w-full text-sm sm:text-base text-[16px] font-normal mb-3 bg-[#F3F3F3]"
+                    className="input w-full text-sm sm:text-base text-[16px] font-normal mb-3 bg-[#F3F3F3] text-gray-500"
                     placeholder="Enter your password"
                     required
                   />

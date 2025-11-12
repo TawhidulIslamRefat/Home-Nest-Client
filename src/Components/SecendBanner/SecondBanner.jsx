@@ -15,7 +15,7 @@ const SecondBanner = ({setSearchText,setSort}) => {
         setInputText("")
     }
   return (
-    <div className="bg-[#F8F7F7] relative py-10"
+    <div className="bg-[#F8F7F7] dark:bg-[#23272b] relative py-10"
     >
       <div className="w-10/12 mx-auto grid lg:grid-cols-2 items-center gap-10 py-15">
         <div className="space-y-6">
@@ -23,7 +23,7 @@ const SecondBanner = ({setSearchText,setSort}) => {
             Easy way to find <br /> a perfect{" "}
             <span className="text-[#FF5A3C]">Property</span>
           </h1>
-          <p className="text-gray-600 max-w-lg font-medium">
+          <p className="text-gray-600 max-w-lg font-medium dark:text-gray-300">
             Discover the perfect place that matches your lifestyle and comfort.
             Every property is chosen with care to bring you peace and happiness.
           </p>

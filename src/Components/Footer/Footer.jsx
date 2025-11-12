@@ -5,7 +5,9 @@ const Footer = () => {
     <div className="bg-[#171B2A] pt-4 ">
       <footer className=" w-11/12 mx-auto footer sm:footer-horizontal  p-10">
         <nav>
-          <h6 className=" bg-linear-to-r to-[orange] from-[#FF5A3C] bg-clip-text text-transparent text-3xl">HomeNest</h6>
+          <a href="/" className="text-2xl font-semibold  text-base-100 dark:text-gray-300 ">
+              Home<span className="text-[#FF5A3C] ">Nest</span>{" "}
+            </a>
           <p className=" text-[17px] text-white leading-7">Your trusted companion for <br /> property buying, renting, and living.</p>
         </nav>
         <nav className="space-y-1">

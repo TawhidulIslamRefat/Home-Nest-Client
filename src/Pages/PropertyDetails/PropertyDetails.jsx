@@ -54,7 +54,7 @@ const PropertyDetails = () => {
         className="w-full h-[450px] rounded-md object-cover"
       />
       <h1 className="text-4xl font-bold mt-6">{property.propertyName}</h1>
-      <p className="text-gray-600 my-5 loading-7 font-medium">
+      <p className="text-gray-600 my-5 loading-7 font-medium dark:text-gray-300">
         {property.description}
       </p>
       <div className="flex gap-10 text-lg font-semibold mt-4">
@@ -72,10 +72,10 @@ const PropertyDetails = () => {
           />
         </div>
         <div className="">
-          <p className="text-lg font-medium text-gray-600">
+          <p className="text-lg font-medium text-gray-600 dark:text-gray-300">
             {property.postedBy?.name}
           </p>
-          <p className="text-sm text-gray-600">{property.postedBy?.email}</p>
+          <p className="text-sm text-gray-600 dark:text-gray-300">{property.postedBy?.email}</p>
         </div>
       </div>
         <h3 className="text-3xl font-bold mb-4 text-center">Ratings & Reviews</h3>
@@ -87,7 +87,7 @@ const PropertyDetails = () => {
             <div className="space-y-4">
            {
             rating.slice(0,3).map((r,index)=>(
-              <div key={index} className="border p-4 rounded-lg bg-white shadow-md flex gap-4 items-start">
+              <div key={index} className="border p-4 rounded-lg bg-white dark:bg-[#23272B] shadow-md flex gap-4 items-start">
                <div>
                 <img src={r.userPhoto} alt={r.userName} 
                  className="w-12 h-12 rounded-full"
@@ -96,10 +96,10 @@ const PropertyDetails = () => {
                <div>
                <p className="font-semibold">{r.userName}</p>
                <p className="text-[#FF5A3C] font-bold"> ⭐ {r.rating}/5</p>
-               <p className="text-gray-700">
+               <p className="text-gray-700 dark:text-gray-300">
                    {r.review.slice(0,70)+("...")}
                </p>
-               <p className="text-sm text-gray-500">
+               <p className="text-sm text-gray-500 dark:text-gray-300">
                  Date :  {new Date(r.date).toLocaleDateString()}
                </p>
                </div>
@@ -110,7 +110,7 @@ const PropertyDetails = () => {
           )
         }
         
-      <div className="mt-12 bg-white rounded-lg shadow-xl border-2 border-gray-300 p-10">
+      <div className="mt-12 bg-white rounded-lg shadow-xl border-2 dark:bg-[#23272B] border-gray-300 p-10">
         <form onSubmit={handleAddRating} className="space-y-5">
           <h3 className="text-2xl font-bold mb-4 text-center">Rate This Propert</h3>
             <label className="text-xl font-semibold">Choose Rating</label>

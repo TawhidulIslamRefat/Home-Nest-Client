@@ -26,7 +26,7 @@ const MyRatings = () => {
         {myRatings.map((r, index) => (
           <div
             key={index}
-            className="bg-white shadow-xl border border-gray-100 rounded-xl p-5 hover:shadow-2xl hover:-translate-y-1 transition-all duration-300"
+            className="bg-white shadow-xl border border-gray-100 dark:bg-[#23272B] rounded-xl p-5 hover:shadow-2xl hover:-translate-y-1 transition-all duration-300"
           >
             <div className="w-full h-44 rounded-lg overflow-hidden mb-4">
               <img
@@ -35,18 +35,18 @@ const MyRatings = () => {
                 className="w-full h-full object-cover hover:scale-110 transition duration-300"
               />
             </div>
-            <h2 className="text-xl font-bold text-[#1f1f1f]">
+            <h2 className="text-xl font-bold text-[#1f1f1f] dark:text-white">
               {r.propertyName}
             </h2>
             <div className="flex items-center gap-2 mt-2 text-yellow-500">
               {[...Array(parseInt(r.rating))].map((_, i) => (
                 <FaStar key={i} />
               ))}
-              <span className="text-black font-medium text-xl">
+              <span className="text-black font-medium text-xl dark:text-[#FF5A3C]">
                 {r.rating}/5
               </span>
             </div>
-            <p className="text-gray-700 mt-3 italic">"{r.review.slice(0,100)+("...")}"</p>
+            <p className="text-gray-700 mt-3 italic dark:text-gray-300">"{r.review.slice(0,100)+("...")}"</p>
 
             <div className="flex items-center gap-3 mt-4">
               <img
@@ -55,7 +55,7 @@ const MyRatings = () => {
               />
               <div>
                 <p className="font-medium">{r.userName}</p>
-                <p className="text-xs text-gray-500">
+                <p className="text-xs text-gray-500 dark:text-gray-300">
                   {new Date(r.date).toLocaleDateString()}
                 </p>
               </div>

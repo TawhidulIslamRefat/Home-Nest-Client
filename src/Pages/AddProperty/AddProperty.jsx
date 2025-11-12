@@ -43,10 +43,10 @@ const AddProperty = () => {
         });
     };
     return (
-        <div className='bg-[#F8F7F7] py-14 min-h-screen'>
-            <div className='max-w-3xl mx-auto bg-white shadow-xl rounded-xl p-10 border border-white'>
+        <div className=' dark:bg-[#1D232A] py-14 min-h-screen'>
+            <div className='max-w-3xl mx-auto bg-white dark:bg-[#23272B] shadow-xl rounded-xl p-10 border '>
                <h1 className='text-center text-4xl font-bold mb-8'>
-               Add New Property
+               Add New <span className='text-[#FF5A3C]'>Property</span>
                </h1>
 
                <form onSubmit={handleAddProperty}>
@@ -114,12 +114,12 @@ const AddProperty = () => {
                  <div className='grid grid-cols-1 md:grid-cols-2 gap-5 my-5'>
                     <input type="text"
                     value={user?.displayName}
-                    className='input input-bordered w-full bg-gray-100'
+                    className='input input-bordered w-full bg-gray-100  dark:bg-[#1D232A]'
                     readOnly
                     />
                     <input type="email"
                     value={user?.email}
-                    className='input input-bordered w-full bg-gray-100'
+                    className='input input-bordered w-full bg-gray-100 dark:bg-[#1D232A]'
                     readOnly
                     />
                  </div>

@@ -14,7 +14,7 @@ const AllPropertiesCard = ({ property }) => {
   } = property;
   return (
     <div className="flex">
-      <div className=" rounded-lg shadow-sm bg-white hover:shadow-2xl hover:-translate-y-1 transition-all duration-300">
+      <div className=" rounded-lg shadow-sm bg-white dark:bg-[#1D232A] dark:border hover:shadow-2xl hover:-translate-y-1 transition-all duration-300">
         <div className="relative">
           <img
             src={image}
@@ -34,15 +34,15 @@ const AllPropertiesCard = ({ property }) => {
           </span>
         </div>
         <div className="p-4 space-y-3">
-          <h2 className="text-2xl font-semibold text-[#1f1f1f]">
+          <h2 className="text-2xl font-semibold text-[#1f1f1f] dark:text-white">
             {propertyName}
           </h2>
           <div className="flex items-center justify-between gap-2 text-gray-600 text-sm font-medium">
             <div className="flex items-center gap-2 text-gray-600 text-sm font-medium">
               <FaLocationDot className="text-[#FF5A3C]" />
-              <span>{location}</span>
+              <span className="dark:text-gray-300">{location}</span>
             </div>
-            <div className="flex flex-col mr-4">
+            <div className="flex flex-col mr-4 dark:text-gray-300">
                 <span className="font-bold">Posted By  :</span>
                 <span> {postedBy.name}</span>
             </div>

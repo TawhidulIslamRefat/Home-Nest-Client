@@ -72,7 +72,7 @@ const Login = () => {
             </h1>
             <form onSubmit={handleLogin}>
               <fieldset className="fieldset ">
-                <label className="label text-lg sm:text-xl font-semibold text-[#403F3F] mb-1 lg:mb-3">
+                <label className="label text-lg sm:text-xl font-semibold text-[#403F3F] dark:text-gray-300 mb-1 lg:mb-3">
                   Email
                 </label>
                 <input
@@ -80,17 +80,17 @@ const Login = () => {
                   name="email"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
-                  className="input  w-full text-sm sm:text-base  font-normal mb-2 lg:mb-5 bg-[#F3F3F3]"
+                  className="input  w-full text-sm sm:text-base  font-normal mb-2 lg:mb-5 text-gray-500 bg-[#F3F3F3]"
                   placeholder="Enter your email address"
                 />
-                <label className="label text-lg sm:text-xl font-semibold text-[#403F3F] mb-1 lg:mb-3">
+                <label className="label text-lg sm:text-xl font-semibold text-[#403F3F] mb-1 lg:mb-3 dark:text-gray-300">
                   Password
                 </label>
                 <div className="relative">
                   <input
                     type={showPassword ? "text" : "password"}
                     name="password"
-                    className="input w-full text-sm sm:text-base p-2 sm:p-3 bg-[#F3F3F3]"
+                    className="input w-full text-sm sm:text-base p-2 sm:p-3 bg-[#F3F3F3] text-gray-500"
                     placeholder="Enter your password"
                     required
                   />

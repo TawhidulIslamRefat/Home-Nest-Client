@@ -41,16 +41,22 @@ const MyProperties = () => {
     <div className="w-10/12 mx-auto my-16">
       <h1 className="text-4xl font-bold text-center mb-10">My Properties</h1>
 
-      {myProperties.length === 0 ? (
-        <p className="text-center text-gray-500 text-xl">
+      {myProperties.length === 0 ? ( <>
+        <div className=" flex flex-col justify-center items-center">
+          <p className="text-center text-gray-500 text-xl">
           You haven't added any property yet
         </p>
+        <div>
+          <Link to='/add-property' className="btn px-10 py-5 mt-10  bg-[#FF5A3C]">Add Property</Link>
+        </div>
+        </div>
+        </>
       ) : (
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {myProperties.map((property) => (
             <div
               key={property._id}
-              className="border rounded-lg shadow-md p-5 bg-white hover:shadow-2xl hover:-translate-y-1 transition-all duration-300"
+              className="border rounded-lg shadow-md p-5 bg-white dark:bg-[#23272B] hover:shadow-2xl hover:-translate-y-1 transition-all duration-300"
             >
               <img
                 src={property.image}
@@ -60,10 +66,10 @@ const MyProperties = () => {
               <h2 className="text-2xl font-bold mt-3">
                 {property.propertyName}
               </h2>
-              <p className="text-gray-600 text-[16px] my-1"> <span className="font-semibold">Category:</span> {property.category}</p>
-              <p className="text-gray-600 flex items-center gap-2 text-[16px]"><span><FaLocationArrow className="text-[#FF5A3C] text-xl"></FaLocationArrow></span> {property.location}</p>
+              <p className="text-gray-600 text-[16px] my-1 dark:text-gray-300"> <span className="font-semibold dark:text-gray-300">Category:</span> {property.category}</p>
+              <p className="text-gray-600 flex items-center gap-2 text-[16px] dark:text-gray-300"><span><FaLocationArrow className="text-[#FF5A3C] text-xl"></FaLocationArrow></span> {property.location}</p>
               <p className="text-[#FF5A3C] font-bold text-lg my-1">Price: ${property.price}</p>
-              <p className="text-gray-500"> <span className="font-semibold">Posted :</span> {new Date(property.postedDate).toLocaleDateString()}</p>
+              <p className="text-gray-500 dark:text-gray-300"> <span className="font-semibold">Posted :</span> {new Date(property.postedDate).toLocaleDateString()}</p>
               <div className=" flex gap-3 mt-5 mb-2">
                 <Link 
                 to={`/properties/${property._id}`}

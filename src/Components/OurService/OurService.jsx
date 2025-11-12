@@ -15,7 +15,7 @@ const OurService = () => {
         <h1 className="text-center font-bold text-4xl mt-5">Our Main Focus</h1>
         <div>
           <div className="grid grid-cols-3 items-center justify-center gap-20 my-15">
-            <div className="card bg-base-100  shadow-xl hover:shadow-2xl hover:-translate-y-1 transition-all duration-300">
+            <div className="card bg-base-100  border shadow-xl hover:shadow-2xl hover:-translate-y-1 transition-all duration-300">
               <figure className="px-10 pt-10">
                 <img
                   src={iamge1}
@@ -29,11 +29,11 @@ const OurService = () => {
                   Find a home that fits your lifestyle and future. Explore verified properties in trusted neighborhoods and choose the one that feels just right for you.
                 </p>
                 <div className="card-actions">
-                  <a href="#" className="flex items-center gap-2 justify-center text-gray-500 font-semibold text-[16px] hover:text-[#FF5A3C]">Find A Home <FaLongArrowAltRight /></a>
+                  <a href="/all-properties" className="flex items-center gap-2 justify-center text-gray-500 font-semibold text-[16px] hover:text-[#FF5A3C]">Find A Home <FaLongArrowAltRight /></a>
                 </div>
               </div>
             </div>
-            <div className="card bg-base-100  shadow-xl hover:shadow-2xl hover:-translate-y-1 transition-all duration-300">
+            <div className="card bg-base-100 border  shadow-xl hover:shadow-2xl hover:-translate-y-1 transition-all duration-300">
               <figure className="px-10 pt-10">
                 <img
                   src={iamge2}
@@ -47,11 +47,11 @@ const OurService = () => {
                   Looking for a comfortable place to stay without long-term commitment? Browse clean, safe, and well-located rental homes that match your budget and needs.
                 </p>
                 <div className="card-actions">
-                  <a href="#" className="flex items-center gap-2 justify-center text-gray-500 font-semibold text-[16px] hover:text-[#FF5A3C]">Find A Home <FaLongArrowAltRight /></a>
+                  <a href="/all-properties" className="flex items-center gap-2 justify-center text-gray-500 font-semibold text-[16px] hover:text-[#FF5A3C]">Find A Home <FaLongArrowAltRight /></a>
                 </div>
               </div>
             </div>
-            <div className="card bg-base-100  shadow-xl hover:shadow-2xl hover:-translate-y-1 transition-all duration-300">
+            <div className="card bg-base-100  border shadow-xl hover:shadow-2xl hover:-translate-y-1 transition-all duration-300">
               <figure className="px-10 pt-10">
                 <img
                   src={iamge3}
@@ -65,7 +65,7 @@ const OurService = () => {
                  Sell your property quickly and confidently. List your home with us and connect with genuine buyers who are actively looking for a place just like yours.
                 </p>
                 <div className="card-actions">
-                  <a href="#" className="flex items-center gap-2 justify-center text-gray-500 font-semibold text-[16px] hover:text-[#FF5A3C]">Find A Home <FaLongArrowAltRight /></a>
+                  <a href="/all-properties" className="flex items-center gap-2 justify-center text-gray-500 font-semibold text-[16px] hover:text-[#FF5A3C]">Find A Home <FaLongArrowAltRight /></a>
                 </div>
               </div>
             </div>

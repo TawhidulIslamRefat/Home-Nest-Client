@@ -50,8 +50,8 @@ const handleTheme = () =>{
 
 
   return (
-    <div>
-      <div className="navbar w-11/12 mx-auto mt-1">
+    <div className="fixed top-0 left-0 right-0 z-50 bg-base-100 shadow-2xl">
+      <div className="navbar w-11/12 mx-auto  mt-1">
         <div className="navbar-start">
           <div className="dropdown">
             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -79,9 +79,9 @@ const handleTheme = () =>{
             </ul>
           </div>
           <div className="flex items-end justify-center gap-2">
-            <a className="text-2xl font-semibold bg-linear-to-r to-[orange] from-[#FF5A3C] bg-clip-text text-transparent">
-              HomeNest{" "}
-              <span className="text-[17px] font-medium text-black dark:text-white">
+            <a href="/" className="text-2xl font-semibold  text-black dark:text-gray-300 ">
+              Home<span className="text-[#FF5A3C] ">Nest</span>{" "}
+              <span className="text-[17px] font-medium text-black dark:text-gray-400">
                 - A Real Estate Listing Portal
               </span>{" "}
             </a>
@@ -119,7 +119,7 @@ const handleTheme = () =>{
                    <p className="text-sm text-black pb-2 text-center dark:text-white">{user.email}</p>
                   </div>
                   <div>
-                    <button className=" btn bg-linear-to-r to-[orange] from-[#FF5A3C] text-white w-full text-[15px] my-2" onClick={handleLogOut}>Logout</button>
+                    <button className=" btn bg-[#FF5A3C] text-white w-full text-[15px] my-2" onClick={handleLogOut}>Logout</button>
                   </div>
                 </div>
               </div>

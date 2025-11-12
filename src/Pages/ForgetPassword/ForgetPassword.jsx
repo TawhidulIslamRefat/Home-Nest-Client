@@ -35,7 +35,7 @@ const ForgetPassword = () => {
           </h1>
           <form onSubmit={handleForgetPassword}>
             <fieldset className="fieldset">
-              <label className="label text-xl font-semibold text-[#403F3F] mb-3">
+              <label className="label text-xl font-semibold text-[#403F3F] mb-3 dark:text-gray-300">
                 Email
               </label>
               <input
@@ -43,7 +43,7 @@ const ForgetPassword = () => {
                 name="email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                className="input w-full text-[16px] font-normal mb-5 bg-[#F3F3F3]"
+                className="input w-full text-[16px] font-normal mb-5 bg-[#F3F3F3] text-gray-500"
                 placeholder="Enter your email address"
               />
               <p className="text-[16px] font-semibold text-[#706F6F] text-center">
