@@ -71,7 +71,7 @@ const MyProperties = () => {
                 > View Details
                 </Link>
                 <Link 
-                to={`/properties/${property._id}`}
+                to={`/properties/${property._id}/edit`}
                 className="btn btn-sm bg-yellow-500 text-white flex-1"
                 > Update
                 </Link>

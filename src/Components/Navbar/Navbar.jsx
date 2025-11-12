@@ -81,7 +81,7 @@ const handleTheme = () =>{
           <div className="flex items-end justify-center gap-2">
             <a className="text-2xl font-semibold bg-linear-to-r to-[orange] from-[#FF5A3C] bg-clip-text text-transparent">
               HomeNest{" "}
-              <span className="text-[17px] font-medium text-black">
+              <span className="text-[17px] font-medium text-black dark:text-white">
                 - A Real Estate Listing Portal
               </span>{" "}
             </a>
@@ -116,7 +116,7 @@ const handleTheme = () =>{
                 >
                   <div className="border-b-2 border-gray-400">
                     <h1 className="text-[18px] font-bold pt-2 text-center">{user.displayName}</h1>
-                   <p className="text-sm text-gray-600 pb-2 text-center">{user.email}</p>
+                   <p className="text-sm text-black pb-2 text-center dark:text-white">{user.email}</p>
                   </div>
                   <div>
                     <button className=" btn bg-linear-to-r to-[orange] from-[#FF5A3C] text-white w-full text-[15px] my-2" onClick={handleLogOut}>Logout</button>

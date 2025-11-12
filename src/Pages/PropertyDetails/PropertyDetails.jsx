@@ -41,6 +41,7 @@ const PropertyDetails = () => {
     })
       .then((res) => res.json())
       .then(() => {
+        setRating([...rating,ratingInfo])
         Swal.fire("Review Added ✅", "Thanks for your feedback!", "success");
         e.target.reset();
       });
@@ -62,7 +63,7 @@ const PropertyDetails = () => {
         <p> 🏷 Category : {property.category}</p>
         <p> Posted On : {new Date(property.postedDate).toLocaleDateString()}</p>
       </div>
-      <div className="flex items-center gap-2 mt-5">
+      <div className="flex items-center gap-2 my-5">
         <div>
           <img
             className="w-15 h-15 rounded-full"
@@ -77,9 +78,41 @@ const PropertyDetails = () => {
           <p className="text-sm text-gray-600">{property.postedBy?.email}</p>
         </div>
       </div>
+        <h3 className="text-3xl font-bold mb-4 text-center">Ratings & Reviews</h3>
+
+        {
+          rating.length===0 ? (
+            <p className="text-xl text-gray-600">No reviews yet.</p>
+          ):(
+            <div className="space-y-4">
+           {
+            rating.slice(0,3).map((r,index)=>(
+              <div key={index} className="border p-4 rounded-lg bg-white shadow-md flex gap-4 items-start">
+               <div>
+                <img src={r.userPhoto} alt={r.userName} 
+                 className="w-12 h-12 rounded-full"
+                />
+               </div>
+               <div>
+               <p className="font-semibold">{r.userName}</p>
+               <p className="text-[#FF5A3C] font-bold"> ⭐ {r.rating}/5</p>
+               <p className="text-gray-700">
+                   {r.review.slice(0,70)+("...")}
+               </p>
+               <p className="text-sm text-gray-500">
+                 Date :  {new Date(r.date).toLocaleDateString()}
+               </p>
+               </div>
+              </div>
+            ))
+           }
+            </div>
+          )
+        }
+        
       <div className="mt-12 bg-white rounded-lg shadow-xl border-2 border-gray-300 p-10">
-        <h3 className="text-2xl font-bold mb-4 text-center">Rate This Property</h3>
         <form onSubmit={handleAddRating} className="space-y-5">
+          <h3 className="text-2xl font-bold mb-4 text-center">Rate This Propert</h3>
             <label className="text-xl font-semibold">Choose Rating</label>
           <select
             name="rating"

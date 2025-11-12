@@ -42,8 +42,11 @@ const MyRatings = () => {
               {[...Array(parseInt(r.rating))].map((_, i) => (
                 <FaStar key={i} />
               ))}
+              <span className="text-black font-medium text-xl">
+                {r.rating}/5
+              </span>
             </div>
-            <p className="text-gray-700 mt-3 italic">"{r.review}"</p>
+            <p className="text-gray-700 mt-3 italic">"{r.review.slice(0,100)+("...")}"</p>
 
             <div className="flex items-center gap-3 mt-4">
               <img
