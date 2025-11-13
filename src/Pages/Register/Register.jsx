@@ -47,6 +47,7 @@ const Register = () => {
           icon: "error",
           title: "Oops...",
           text: "Something went wrong!",
+          confirmButtonColor:"#FF5A3C",
           error,
         });
       });
@@ -116,6 +117,7 @@ const Register = () => {
           icon: "error",
           title: "Oops...",
           text: "Something went wrong!",
+          confirmButtonColor:"#FF5A3C",
           error,
         });
       });

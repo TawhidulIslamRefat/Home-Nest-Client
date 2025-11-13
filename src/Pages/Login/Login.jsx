@@ -46,6 +46,7 @@ const Login = () => {
               icon: "error",
               title: "Oops...",
               text: "Something went wrong!",
+              confirmButtonColor:"#FF5A3C"
             });
             console.error(error);
           });
@@ -55,6 +56,7 @@ const Login = () => {
           icon: "error",
           title: "Oops...",
           text: "Something went wrong!",
+          confirmButtonColor:"#FF5A3C",
           error,
         });
       });
@@ -83,6 +85,7 @@ const Login = () => {
           icon: "error",
           title: "Oops...",
           text: "Something went wrong!",
+          confirmButtonColor:"#FF5A3C",
           error,
         });
       });

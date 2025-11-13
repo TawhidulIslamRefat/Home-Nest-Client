@@ -25,6 +25,7 @@ const AllProperties = () => {
                    title: "Oops...",
                    text: "Something went wrong!",
                    error,
+                   confirmButtonColor:"#FF5A3C"
                  })
     )
       .finally(() => setLoading(false));
