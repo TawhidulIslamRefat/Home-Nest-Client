@@ -6,11 +6,11 @@ const ErrorPage = () => {
   return (
     <div>
       <div className="flex flex-col justify-center items-center">
-        <div className="w-[800px]">
+        <div className=" w-[300px] md:-[500px] lg:w-[800px]">
           <Lottie animationData={error} loop={true} />
       <div className="flex flex-col justify-center items-center">
-        <h1 className="text-6xl font-bold text-center">Page Not Found!</h1>
-        <p className="text-[16px] font-medium text-center mt-8 ">
+        <h1 className=" text-xl sm:text-2xl ms:text-4xl lg:text-6xl font-bold text-center">Page Not Found!</h1>
+        <p className="text-sm md:text-[16px] font-medium text-center mt-8 ">
           Oops! The page you are looking for does not exist. It might have been
           moved or deleted.
         </p>

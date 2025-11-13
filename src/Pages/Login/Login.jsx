@@ -16,50 +16,51 @@ const Login = () => {
       .then((result) => {
         const user = result.user;
         setUser(user);
-        const newUser ={
-          name:user.displayName,
-          email:user.email,
-          image:user.photoURL,
-           createAt:new Date()
+        const newUser = {
+          name: user.displayName,
+          email: user.email,
+          image: user.photoURL,
+          createAt: new Date(),
         };
 
-      fetch("http://localhost:3000/users",{
-            method:"POST",
-            headers:{
-              "content-type":"application/json"
-            },
-            body:JSON.stringify(newUser),
-          })
-          .then((res)=> res.json())
-          .then(()=>{
+        fetch("https://home-nest-server-psi.vercel.app/users", {
+          method: "POST",
+          headers: {
+            "content-type": "application/json",
+          },
+          body: JSON.stringify(newUser),
+        })
+          .then((res) => res.json())
+          .then(() => {
             Swal.fire({
-                position: "center",
-                icon: "success",
-                title: "Login Successful",
-                showConfirmButton: false,
-                timer: 1500,
-              });
-              navigate(`${location.state ? location.state : "/"}`)
-      })
+              position: "center",
+              icon: "success",
+              title: "Login Successful",
+              showConfirmButton: false,
+              timer: 1500,
+            });
+            navigate(`${location.state ? location.state : "/"}`);
+          })
           .catch((error) => {
-          Swal.fire({
-            icon: "error",
-            title: "Oops...",
-            text: "Something went wrong!",
+            Swal.fire({
+              icon: "error",
+              title: "Oops...",
+              text: "Something went wrong!",
+            });
+            console.error(error);
           });
-          console.error(error);
-        });
-    })
+      })
       .catch((error) => {
         Swal.fire({
           icon: "error",
           title: "Oops...",
-          text: "Something went wrong!",error,
+          text: "Something went wrong!",
+          error,
         });
       });
   };
 
-    const handleLogin = (event) => {
+  const handleLogin = (event) => {
     event.preventDefault();
     const email = event.target.email.value;
     const password = event.target.password.value;
@@ -69,26 +70,27 @@ const Login = () => {
         console.log(user);
         setUser(user);
         Swal.fire({
-                position: "center",
-                icon: "success",
-                title: "Login Successful",
-                showConfirmButton: false,
-                timer: 1500,
-              });
-         navigate(`${location.state ? location.state : "/"}`)
+          position: "center",
+          icon: "success",
+          title: "Login Successful",
+          showConfirmButton: false,
+          timer: 1500,
+        });
+        navigate(`${location.state ? location.state : "/"}`);
       })
       .catch((error) => {
-          Swal.fire({
+        Swal.fire({
           icon: "error",
           title: "Oops...",
-          text: "Something went wrong!",error,
+          text: "Something went wrong!",
+          error,
         });
       });
   };
   return (
     <div>
       <div className="flex justify-center items-center min-h-screen lg:my-0 lg:min-h-screen">
-         <title>Login</title>
+        <title>Login</title>
         <div className="card bg-base-100  w-[95%]   md:w-[70%] lg:w-[60%] 2xl:w-[35%] shrink-0 rounded-[5px] shadow-2xl ">
           <div className="card-body px-4 lg:px-15">
             <h1 className="text-xl sm:text-3xl md:text-4xl font-semibold text-center mt-2 lg:mt-[30px] pb-3 lg:pb-10 border-b border-base-300 px-5">
@@ -126,14 +128,14 @@ const Login = () => {
                   </span>
                 </div>
                 <div>
-                <Link
-                  to="/forget-pass"
-                  state={{ email: email }}
-                  className="link link-hover text-[13px]"
-                >
-                  Forgot password?
-                </Link>
-              </div>
+                  <Link
+                    to="/forget-pass"
+                    state={{ email: email }}
+                    className="link link-hover text-[13px]"
+                  >
+                    Forgot password?
+                  </Link>
+                </div>
                 <button
                   type="submit"
                   className="btn bg-[#FF5A3C] hover:bg-orange-700 text-white mt-4 mb-2"
@@ -177,10 +179,7 @@ const Login = () => {
             </button>
             <p className="text-sm md:text-[16px] font-semibold text-[#706F6F] text-center">
               Dont’t Have An Account ?
-              <Link
-                className="text-[#F75B5F] hover:underline"
-                to="/register"
-              >
+              <Link className="text-[#F75B5F] hover:underline" to="/register">
                 Register
               </Link>
             </p>

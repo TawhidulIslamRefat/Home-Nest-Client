@@ -2,16 +2,14 @@ import { useEffect, useState } from "react";
 import PropertyCard from "../PropertyCard/PropertyCard";
 
 const LatestProperties = () => {
+  const [properties, setProperties] = useState([]);
 
-  const [properties,setProperties] = useState([]);
+  useEffect(() => {
+    fetch("https://home-nest-server-psi.vercel.app/latest-properties")
+      .then((res) => res.json())
+      .then((data) => setProperties(data));
+  }, []);
 
-
-  useEffect(()=>{
-    fetch("http://localhost:3000/latest-properties")
-    .then((res)=> res.json())
-    .then((data)=>setProperties(data))
-  },[])
-  
   return (
     <div className=" w-[90%] sm:w-[95%] 2xl:w-9/12 mx-auto">
       <div className="text-center mb-10 mt-15 md:mt-20 md:mb-20">

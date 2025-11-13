@@ -23,7 +23,7 @@ const Register = () => {
           createAt: new Date(),
         };
 
-        fetch("http://localhost:3000/users", {
+        fetch("https://home-nest-server-psi.vercel.app/users", {
           method: "POST",
           headers: {
             "content-type": "application/json",
@@ -33,12 +33,12 @@ const Register = () => {
           .then((res) => res.json())
           .then(() => {
             Swal.fire({
-                position: "center",
-                icon: "success",
-                title: "Sign Up Successful",
-                showConfirmButton: false,
-                timer: 1500,
-              });
+              position: "center",
+              icon: "success",
+              title: "Sign Up Successful",
+              showConfirmButton: false,
+              timer: 1500,
+            });
             navigate("/");
           });
       })
@@ -91,7 +91,7 @@ const Register = () => {
             createAt: new Date(),
           };
 
-          fetch("http://localhost:3000/users", {
+          fetch("https://home-nest-server-psi.vercel.app/users", {
             method: "POST",
             headers: {
               "content-type": "application/json",
@@ -124,7 +124,7 @@ const Register = () => {
     <div>
       <div>
         <div className="flex justify-center  items-center min-h-screen mt-15">
-           <title>SignUp</title>
+          <title>SignUp</title>
           <div className="card bg-base-100 w-[95%]   md:w-[70%] lg:w-[60%] 2xl:w-[35%] shrink-0 rounded-[5px]  shadow-2xl">
             <div className="card-body px-4 lg:px-15">
               <h1 className="text-xl sm:text-3xl md:text-4xl font-semibold text-center mt-2 lg:mt-[30px] pb-3 lg:pb-10border-b border-base-300">
@@ -185,7 +185,7 @@ const Register = () => {
                     type="submit"
                     className="btn bg-[#FF5A3C] hover:bg-orange-700 text-white mt-4 mb-2"
                   >
-                   Sign Up
+                    Sign Up
                   </button>
                 </fieldset>
               </form>

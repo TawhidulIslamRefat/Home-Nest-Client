@@ -8,18 +8,19 @@ import Loading from "../../Components/Loading/Loading";
 const MyProperties = () => {
   const { user } = use(AuthContext);
   const [myProperties, setMyProperties] = useState([]);
-  const [loading,setLoading] = useState(true);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     setLoading(true);
-    fetch(`http://localhost:3000/properties?email=${user?.email}`)
+    fetch(
+      `https://home-nest-server-psi.vercel.app/properties?email=${user?.email}`
+    )
       .then((res) => res.json())
-      .then((data) =>{
+      .then((data) => {
         setMyProperties(data);
-        setLoading(false);      
+        setLoading(false);
       })
-      .catch(()=> setLoading(false)) 
-
+      .catch(() => setLoading(false));
   }, [user?.email]);
 
   const handleDelete = (id) => {
@@ -33,7 +34,7 @@ const MyProperties = () => {
       confirmButtonText: "Yes,Delete !",
     }).then((result) => {
       if (result.isConfirmed) {
-        fetch(`http://localhost:3000/properties/${id}`, {
+        fetch(`https://home-nest-server-psi.vercel.app/properties/${id}`, {
           method: "DELETE",
         })
           .then((res) => res.json())
@@ -45,23 +46,31 @@ const MyProperties = () => {
     });
   };
 
-   if (loading) {
+  if (loading) {
     return <Loading />;
   }
   return (
     <div className="w-[90%] lg:w-[95%] 2xl:w-11/12 mx-auto my-16 mt-30">
       <title>My-Properties</title>
-      <h1 className="text-xl sm:text-2xl md:text-4xl font-bold text-center mb-10">My <span className="text-[#FF5A3C]">Properties</span></h1>
+      <h1 className="text-xl sm:text-2xl md:text-4xl font-bold text-center mb-10">
+        My <span className="text-[#FF5A3C]">Properties</span>
+      </h1>
 
-      {myProperties.length === 0 ? ( <>
-        <div className=" flex flex-col justify-center items-center">
-          <p className="text-center text-gray-500 text-sm sm:text-lg md:text-xl">
-          You haven't added any property yet
-        </p>
-        <div>
-          <Link to='/add-property' className="btn px-10 py-5 mt-10 text-white  bg-[#FF5A3C]">Add Property</Link>
-        </div>
-        </div>
+      {myProperties.length === 0 ? (
+        <>
+          <div className=" flex flex-col justify-center items-center">
+            <p className="text-center text-gray-500 text-sm sm:text-lg md:text-xl">
+              You haven't added any property yet
+            </p>
+            <div>
+              <Link
+                to="/add-property"
+                className="btn px-10 py-5 mt-10 text-white  bg-[#FF5A3C]"
+              >
+                Add Property
+              </Link>
+            </div>
+          </div>
         </>
       ) : (
         <div className="grid grid-cols-1 sm:grid-cols-2  lg:grid-cols-3 xl:grid-cols-4 gap-6 sm:gap-4 md:gap-8">
@@ -78,28 +87,49 @@ const MyProperties = () => {
               <h2 className=" text-lg sm:text-xl md:text-2xl font-bold mt-3">
                 {property.propertyName}
               </h2>
-              <p className="text-gray-600 text-sm sm:text-[16px] my-1 dark:text-gray-300"> <span className="font-semibold dark:text-gray-300">Category:</span> {property.category}</p>
-              <p className="text-gray-600 flex items-center gap-2 text-sm sm:text-[16px]dark:text-gray-300"><span><FaLocationArrow className="text-[#FF5A3C] text-xl"></FaLocationArrow></span> {property.location}</p>
-              <p className="text-[#FF5A3C] font-bold text-sm sm:text-lg my-1">Price: ${property.price}</p>
-              <p className="text-gray-500 dark:text-gray-300 text-sm sm:text-lg"> <span className="font-semibold">Posted :</span> {new Date(property.postedDate).toLocaleDateString()}</p>
+              <p className="text-gray-600 text-sm sm:text-[16px] my-1 dark:text-gray-300">
+                {" "}
+                <span className="font-semibold dark:text-gray-300">
+                  Category:
+                </span>{" "}
+                {property.category}
+              </p>
+              <p className="text-gray-600 flex items-center gap-2 text-sm sm:text-[16px]dark:text-gray-300">
+                <span>
+                  <FaLocationArrow className="text-[#FF5A3C] text-xl"></FaLocationArrow>
+                </span>{" "}
+                {property.location}
+              </p>
+              <p className="text-[#FF5A3C] font-bold text-sm sm:text-lg my-1">
+                Price: ${property.price}
+              </p>
+              <p className="text-gray-500 dark:text-gray-300 text-sm sm:text-lg">
+                {" "}
+                <span className="font-semibold">Posted :</span>{" "}
+                {new Date(property.postedDate).toLocaleDateString()}
+              </p>
               <div className=" flex gap-3  mt-2 mb-2">
-                <Link 
-                to={`/properties/${property._id}`}
-                className="btn btn-sm bg-blue-500 text-white flex-1"
-                > View Details
+                <Link
+                  to={`/properties/${property._id}`}
+                  className="btn btn-sm bg-blue-500 text-white flex-1"
+                >
+                  {" "}
+                  View Details
                 </Link>
-                <Link 
-                to={`/properties/${property._id}/edit`}
-                className="btn btn-sm bg-yellow-500 text-white flex-1"
-                > Update
+                <Link
+                  to={`/properties/${property._id}/edit`}
+                  className="btn btn-sm bg-yellow-500 text-white flex-1"
+                >
+                  {" "}
+                  Update
                 </Link>
               </div>
-                    <button 
-                    onClick={()=> handleDelete(property._id)}
-                    className="btn btn-sm bg-rose-500 text-white w-full"
-                    >
-                        Delete
-                    </button>
+              <button
+                onClick={() => handleDelete(property._id)}
+                className="btn btn-sm bg-rose-500 text-white w-full"
+              >
+                Delete
+              </button>
             </div>
           ))}
         </div>

@@ -6,23 +6,26 @@ import Loading from "../../Components/Loading/Loading";
 const MyRatings = () => {
   const { user } = use(AuthContext);
   const [myRatings, setMyRatings] = useState([]);
-  const [loading,setLoading] = useState(true)
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch(`http://localhost:3000/my-ratings?email=${user.email}`)
+    fetch(
+      `https://home-nest-server-psi.vercel.app/my-ratings?email=${user.email}`
+    )
       .then((res) => res.json())
-      .then((data) => {setMyRatings(data)
-       setLoading(false);
+      .then((data) => {
+        setMyRatings(data);
+        setLoading(false);
       })
-      .catch(()=>setLoading(false))
+      .catch(() => setLoading(false));
   }, [user]);
 
   if (loading) {
-    return <Loading></Loading>
+    return <Loading></Loading>;
   }
   return (
     <div className=" w-[95%] md:w-11/12 mx-auto py-14 mt-16 overflow-x-hidden">
-       <title>My-Rating</title>
+      <title>My-Rating</title>
       <h1 className="text-xl sm:text-2xl md:text-4xl font-bold text-center mb-10">
         My <span className="text-[#FF5A3C]">Ratings & Reviews</span>
       </h1>
@@ -56,7 +59,9 @@ const MyRatings = () => {
                 {r.rating}/5
               </span>
             </div>
-            <p className="text-gray-700 mt-3 italic dark:text-gray-300 text-sm sm:text-[16px]">"{r.review.slice(0,100)+("...")}"</p>
+            <p className="text-gray-700 mt-3 italic dark:text-gray-300 text-sm sm:text-[16px]">
+              "{r.review.slice(0, 100) + "..."}"
+            </p>
 
             <div className="flex items-center gap-3 mt-4">
               <img
