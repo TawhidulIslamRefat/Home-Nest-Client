@@ -1,16 +1,29 @@
-# React + Vite
+# 🏠 HomeNest
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**HomeNest** — A modern real estate listing platform where users can explore, post, and manage property listings for rent or sale with ease.
 
-Currently, two official plugins are available:
+🔗 **Live Site URL:** [https://homenest-client.vercel.app](https://homenest-client.vercel.app)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## 🌟 Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- 🏡 **Property Listings:** Users can browse all available properties for rent, sale, commercial spaces, or land.
+- 👤 **User Authentication:** Secure registration and login system using Firebase Authentication (Email & Google Login).
+- 🧾 **Add & Manage Properties:** Logged-in users can add new listings, update or delete their own properties.
+- ⭐ **Ratings & Reviews:** Users can rate and review properties they have visited or rented.
+- 🌙 **Dark/Light Theme:** Elegant UI with light and dark mode toggle for better user experience.
+- 🔍 **Search & Sort:** Easily find properties by name and sort them by price or posting date.
+- 📱 **Fully Responsive:** Optimized design for mobile, tablet, and desktop devices.
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🧠 Technologies Used
+
+- **Frontend:** React, React Router, Tailwind CSS, DaisyUI, Swiper.js, Lottie Animation
+- **Backend:** Node.js, Express.js, MongoDB
+- **Authentication:** Firebase Auth (Email/Password + Google Login)
+- **UI Enhancements:** SweetAlert2, Framer Motion, React Icons
+
+---
+

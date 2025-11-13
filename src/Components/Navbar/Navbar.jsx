@@ -3,6 +3,7 @@ import { Link, NavLink } from "react-router";
 import { AuthContext } from "../../Contexts/AuthContext";
 import { FaMoon, FaSun } from "react-icons/fa";
 import Swal from "sweetalert2";
+import image from '../../assets/icons8-home-48.png'
 
 const Navbar = () => {
   const { user, logOut } = use(AuthContext);
@@ -96,13 +97,18 @@ const handleTheme = () =>{
               {links}
             </ul>
           </div>
-          <div className="grid grid-cols-1 items-end justify-center gap-2">
-            <a href="/" className="text-sm md:text-2xl font-semibold  text-black dark:text-gray-300 ">
+          <div className="flex items-center justify-center gap-2">
+           <div>
+             <img src={image} className="md:w-10 w-7 h-7 md:h-10" alt="Logo" />
+           </div>
+            <div>
+              <a href="/" className="text-sm md:text-xl font-semibold  text-black dark:text-gray-300 ">
               Home<span className="text-[#FF5A3C] ">Nest</span>{" "}
-              <span className="text-[17px] font-medium text-black dark:text-gray-400 hidden 2xl:block">
+              <span className="text-sm font-medium text-black dark:text-gray-400 hidden 2xl:block">
                 - A Real Estate Listing Portal
               </span>{" "}
             </a>
+            </div>
           </div>
         </div>
         <div className="navbar-center hidden lg:flex">

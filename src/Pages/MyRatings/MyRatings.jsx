@@ -22,6 +22,7 @@ const MyRatings = () => {
   }
   return (
     <div className=" w-[95%] md:w-11/12 mx-auto py-14 mt-16 overflow-x-hidden">
+       <title>My-Rating</title>
       <h1 className="text-xl sm:text-2xl md:text-4xl font-bold text-center mb-10">
         My <span className="text-[#FF5A3C]">Ratings & Reviews</span>
       </h1>

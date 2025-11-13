@@ -25,6 +25,7 @@ const AllProperties = () => {
   }
   return (
     <div>
+      <title>All-Properties</title>
       <section>
         <SecondBanner
           setSearchText={setSearchText}

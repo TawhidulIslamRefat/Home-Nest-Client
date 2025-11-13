@@ -50,6 +50,7 @@ const MyProperties = () => {
   }
   return (
     <div className="w-[90%] lg:w-[95%] 2xl:w-11/12 mx-auto my-16 mt-30">
+      <title>My-Properties</title>
       <h1 className="text-xl sm:text-2xl md:text-4xl font-bold text-center mb-10">My <span className="text-[#FF5A3C]">Properties</span></h1>
 
       {myProperties.length === 0 ? ( <>

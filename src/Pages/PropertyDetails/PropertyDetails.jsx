@@ -56,6 +56,7 @@ const PropertyDetails = () => {
   }
   return (
     <div className="max-w-5xl mx-auto py-10 mt-10 md:mt-25">
+       <title>{property.propertyName}</title>
       <img
         src={property.image}
         alt=""
